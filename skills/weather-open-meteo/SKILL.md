@@ -1,7 +1,7 @@
 ---
 name: weather-open-meteo
 description: Current weather and a 1-7 day forecast for any city via Open-Meteo. Free, no API key, standard-library Python.
-version: 1.0.0
+version: 1.1.0
 author: hermes-skills contributors
 license: MIT
 platforms: [linux, macos]
@@ -31,6 +31,9 @@ metadata:
    (date, conditions, high, low, rain_chance).
 4. Answer in 2-4 short lines: now, today's high/low and rain chance, one practical tip (umbrella, jacket).
    Mention the place the script resolved, so a wrong match is visible.
+
+If Open-Meteo's forecast server does not answer within 6 seconds, the script automatically uses MET Norway
+(api.met.no) for the same place; then `source` says so and days show `precipitation` instead of `rain_chance`.
 
 ## Pitfalls
 - Ambiguous names ("Springfield"): add the state or country, e.g. `"Springfield, IL"`.
